@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar & Reminders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div>
+            <div class="logo">Amornrat Ice Portal</div>
+            <div class="nav-links">
+                <a href="dashboard.html"><i class="fas fa-home"></i> Home</a>
+                <a href="sales.html"><i class="fas fa-chart-line"></i> Sales</a>
+                <a href="expenses.html"><i class="fas fa-receipt"></i> Expenses</a>
+                <a href="calendar.html" class="active"><i class="fas fa-calendar-alt"></i> Calendar</a>
+            </div>
+        </div>
+        <div class="sidebar-bottom">
+            <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <h1>Calendar & Reminders</h1>
+        </div>
+
+        <!-- Calendar Section -->
+        <div class="calendar-container">
+            <!-- Add Task Form -->
+            <div class="task-form-container">
+                <h2>Add New Task</h2>
+                <form class="task-form">
+                    <div class="form-group">
+                        <label for="taskName">Task Name</label>
+                        <input type="text" id="taskName" name="taskName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="taskDate">Date</label>
+                        <input type="date" id="taskDate" name="taskDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="taskTime">Time</label>
+                        <input type="time" id="taskTime" name="taskTime">
+                    </div>
+                    <div class="form-group">
+                        <label for="taskPriority">Priority</label>
+                        <select id="taskPriority" name="taskPriority">
+                            <option value="normal">Normal</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">Add Task</button>
+                </form>
+            </div>
+
+            <!-- Upcoming Tasks List -->
+            <div class="task-list-container">
+                <h2>Upcoming Tasks</h2>
+                <ul class="task-list">
+                    <li class="task-item">
+                        <span class="task-name">Follow up customer invoice</span>
+                        <span class="task-datetime">2025-05-01 10:00</span>
+                        <span class="task-priority high">High</span>
+                    </li>
+                    <li class="task-item">
+                        <span class="task-name">Order ice production materials</span>
+                        <span class="task-datetime">2025-05-03</span>
+                        <span class="task-priority normal">Normal</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2025 Amornrat Ice Company Limited<br>Contact Us: amornratice57@gmail.com, 02 395 0010</p>
+        </div>
+    </div>
+</body>
+</html>

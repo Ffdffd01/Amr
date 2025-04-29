@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div>
+            <div class="logo">Amornrat Ice Portal</div>
+            <div class="nav-links">
+                <a href="dashboard.html"><i class="fas fa-home"></i> Home</a>
+                <a href="sales.html"><i class="fas fa-chart-line"></i> Sales</a>
+                <a href="expenses.html" class="active"><i class="fas fa-receipt"></i> Expenses</a>
+                <a href="calendar.html" class="active"><i class="fas fa-calendar-alt"></i> Calendar</a>
+            </div>
+        </div>
+        <div class="sidebar-bottom">
+            <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <h1>Expenses Dashboard</h1>
+        </div>
+
+        <!-- Expenses Section -->
+        <div class="sales-container">
+            <!-- Expenses Form and Graph Section -->
+            <div class="sales-section">
+                <!-- Expenses Form -->
+                <div class="sales-form-container">
+                    <h2>Enter Expense Details</h2>
+                    <form class="sales-form">
+                        <div class="form-group">
+                            <label for="expenseName">Expense Name</label>
+                            <input type="text" id="expenseName" name="expenseName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expenseAmount">Expense Amount (THB)</label>
+                            <input type="number" id="expenseAmount" name="expenseAmount" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expenseDate">Expense Date</label>
+                            <input type="date" id="expenseDate" name="expenseDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expenseStatus">Status</label>
+                            <select id="expenseStatus" name="expenseStatus" required>
+                                <option value="Paid">Paid</option>
+                                <option value="Pending">Pending</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Expense</button>
+                    </form>
+                </div>
+
+                <!-- Expenses Graph -->
+                <div class="sales-graph-container">
+                    <h2>Expenses Trend</h2>
+                    <div class="graph-box">
+                        [Graph Placeholder]
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expenses List -->
+            <div class="sales-list-container">
+                <h2>Expenses List</h2>
+                <table class="sales-table">
+                    <thead>
+                        <tr>
+                            <th>Expense Name</th>
+                            <th>Amount (THB)</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Electricity Bill</td>
+                            <td>3500</td>
+                            <td>2025-04-26</td>
+                            <td>Paid</td>
+                            <td><button class="edit-btn">Edit</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2025 Amornrat Ice Company Limited<br>Contact Us: amornratice57@gmail.com, 02 395 0010</p>
+        </div>
+    </div>
+</body>
+</html>

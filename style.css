@@ -1,0 +1,377 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Prevent scroll down */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background-color: royalblue;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.sidebar-bottom a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    background-color: #f4f6f8;
+    padding: 20px;
+    overflow-y: auto; /* Allow vertical scroll inside main content */
+}
+
+/* Header */
+.header {
+    margin-bottom: 20px;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 40px; /* Consistent space between sections */
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Sales Section Flex */
+.sales-section {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Sales Form Styling */
+.sales-form-container {
+    flex: 1;
+}
+
+/* Sales Graph Styling */
+.sales-graph-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Sales List */
+.sales-list-container {
+    margin-top: 40px;
+}
+
+/* Cards */
+.top-cards, .expenses-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* Amount Styles */
+.amount {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.amount-green {
+    color: #2ecc71; /* Nice Green */
+}
+
+.amount-red {
+    color: #e74c3c; /* Nice Red */
+}
+
+/* Chart Section */
+.chart-header {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.date-range {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chart-box {
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Chart Placeholder */
+.chart-placeholder {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #999;
+}
+
+.nav-links a i {
+    margin-right: 8px;
+}
+
+.sidebar-bottom a i {
+    margin-right: 8px;
+}
+
+/* --- Sales Form Styles --- */
+.sales-form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.sales-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: royalblue;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button {
+    background-color: royalblue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #003c8f;
+}
+
+/* SALES PAGE FORM */
+.sales-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    padding: 10px;
+    background-color: royalblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #4169e1;
+}
+
+/* SALES TABLE */
+.sales-list-container {
+    overflow-x: auto;
+}
+
+.sales-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sales-table th, .sales-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.sales-table th {
+    background-color: royalblue;
+    color: white;
+}
+
+.sales-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.edit-btn {
+    padding: 6px 12px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit-btn:hover {
+    background-color: #e67e22;
+}
+
+/* Active link in sidebar */
+.nav-links a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.calendar-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.task-form-container, .task-list-container {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.task-form .form-group {
+    margin-bottom: 15px;
+}
+
+.task-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.task-form input, 
+.task-form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.task-priority.high {
+    color: red;
+    font-weight: bold;
+}
+
+.task-priority.normal {
+    color: green;
+}
